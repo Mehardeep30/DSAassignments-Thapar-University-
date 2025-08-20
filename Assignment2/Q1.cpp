@@ -10,8 +10,8 @@ void BubbleSort(int arr[],int n) {
                 arr[j+1]=temp;
                 check=false;
             }
-            if (check) return;
         }
+        if (check) return;
     }
     return;
 }
