@@ -86,5 +86,22 @@ int minDepth(node*root) {
     return 1+min(lh,rh);
 }
 int main() {
+    node* root = new node(10);
+    root->left = new node(5);
+    root->right = new node(15);
+
+    root->left->left = new node(3);
+    root->left->right = new node(7);
+
+    root->right->left = new node(12);
+    root->right->right = new node(18);
+    insertElement(root,100);
+    inorder(root);
+    cout<<endl;
+    deleteNode(root,100);
+    inorder(root);
+    cout<<endl;
+    cout<<maxDepth(root)<<endl;
+    cout<<minDepth(root)<<endl;
     return 0;
 }
